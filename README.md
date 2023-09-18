@@ -9,9 +9,9 @@ getlinked Tech web app for managing your innovation skills in Seconds
 
 Here's some notes about my submission:
 
-1. A link to the project repository   https://github.com/olatunde1998/eazipay-app
+1. A link to the project repository   https://github.com/olatunde1998/getlinked-tech
 
-2. A publicly live hosted URL of the challenge  https://eazipay-app.vercel.app/, https://eazipay-app.vercel.app/dashboard/
+2. A publicly live hosted URL of the challenge  https://getlinked-tech.vercel.app/
 
 Thank you very much.
 
@@ -36,10 +36,10 @@ Rasheed Olatunde
 # How to Contribute
 
 1. Clone the repository 
-$ git clone [https://github.com/olatunde1998/eazipay-app](https://github.com/olatunde1998/eazipay-app)
+$ git clone [https://github.com/olatunde1998/getlinked-tech](https://github.com/olatunde1998/getlinked-tech)
 
 2. Change directory into the cloned folder and run the setup script
-$ cd eazipay-app
+$ cd getlinked-tech
 
 3. Open your terminal and type this command `yarn install ` or `npm install` to add the react dependency to the app in the development mode.
 
@@ -53,7 +53,7 @@ Vercel was used to deploy the app.
  + [Vercel](https://vercel.com/dashboard)
 
 # License
-The MIT License - Copyright (c) 2023 - Present, geodevcode/  Storage Service.
+The MIT License - Copyright (c) 2023 - Present, geodevcode / Storage Service.
 
 # Author
 Rasheed Olatunde (Frontend Developer)
