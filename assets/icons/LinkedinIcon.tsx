@@ -13,8 +13,8 @@ export const LinkedinIcon = ({
 }: linkedinIconProps) => {
   return (
     <svg
-      width="24"
-      height="24"
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
       className={className}
       fill="none"

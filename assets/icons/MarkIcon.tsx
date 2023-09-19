@@ -13,8 +13,8 @@ export const MarkIcon = ({
 }: markIconProps) => {
   return (
     <svg
-      width="17"
-      height="17"
+      width={width}
+      height={height}
       className={className}
       viewBox="0 0 17 17"
       fill="none"

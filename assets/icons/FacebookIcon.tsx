@@ -13,8 +13,8 @@ export const FacebookIcon = ({
 }: facebookIconProps) => {
   return (
     <svg
-      width="11"
-      height="20"
+      width={width}
+      height={height}
       viewBox="0 0 11 20"
       className={className}
       fill="none"

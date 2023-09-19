@@ -13,8 +13,8 @@ export const InstagramIcon = ({
 }: instagramIconProps) => {
   return (
     <svg
-      width="24"
-      height="24"
+      width={width}
+      height={height}
       className={className}
       viewBox="0 0 24 24"
       fill="none"
