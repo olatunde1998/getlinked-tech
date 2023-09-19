@@ -8,8 +8,8 @@ interface xIconProps {
 export const XIcon = ({ color, className, width, height }: xIconProps) => {
   return (
     <svg
-      width="19"
-      height="17"
+      width={width}
+      height={height}
       className={className}
       viewBox="0 0 19 17"
       fill="none"
