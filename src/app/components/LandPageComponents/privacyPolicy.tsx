@@ -5,7 +5,7 @@ import { MarkIcon } from "../../../../assets/icons/MarkIcon";
 export const PrivacyPolicy = () => {
   return (
     <>
-      <div className="md:flex md:max-w-[1200px] md:gap-24 md:mx-auto md:items-center">
+      <div className="md:flex md:max-w-[1200px] md:gap-24 md:mx-auto md:items-center xl:ml-36">
         <section className="text-center md:w-1/2">
           <div>
             <p className="text-[20px] font-bold w-[180px] mx-auto md:mx-0 md:text-left md:text-[32px] md:w-[300px] md:leading-10">
