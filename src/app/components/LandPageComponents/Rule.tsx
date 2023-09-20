@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Rules = () => {
   return (
     <>
-      <section className="mt-12 text-center md:flex md:flex-row-reverse md:justify-center md:items-center md:gap  max-w-[1100px] mx-auto">
+      <section className="mt-12 text-center md:flex md:flex-row-reverse md:justify-center md:items-center md:gap  max-w-[1100px] mx-auto lg:mt-0">
         <div className="relative w-[250px] h-[250px] mx-auto  md:w-1/2 md:hidden">
           <Image src="/images/mobile-images/rule.png" alt="bulb picx" fill />
         </div>

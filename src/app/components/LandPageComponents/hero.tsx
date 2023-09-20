@@ -7,8 +7,8 @@ export const Hero = () => {
   return (
     <>
       <main className="md:max-w-[1200px] md:mx-auto">
-        <div>
-          <p className="text-[18px] text-center  md:text-right lg:text-[24px] font-bold">
+        <div className="md:pr-4 lg:pr-0">
+          <p className="text-[18px] text-center  md:text-right lg:text-[24px] font-bold ">
             Igniting a Revolution in HR Innovation
           </p>
           <div className="mx-auto md:hidden">

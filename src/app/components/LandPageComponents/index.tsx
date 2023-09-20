@@ -6,3 +6,6 @@ export * from './criteria'
 export * from './rewards'
 export * from './partners'
 export * from './privacyPolicy'
+export * from './TailwindTimeline'
+export * from "./TimeLineThree"
+export * from "./Header"

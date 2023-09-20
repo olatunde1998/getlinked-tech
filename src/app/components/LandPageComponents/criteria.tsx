@@ -58,7 +58,7 @@ export const Criteria = () => {
             of the hackathon, including deadlines, use of specific technologies
             or APIs, and any other competition-specific requirements.
           </p>
-          <div className="text-center bg-[#903AFF] p-3 rounded-lg w-[150px] mx-auto md:mx-0">
+          <div className="text-center bg-[#903AFF] p-3 rounded-lg w-[150px] mx-auto md:mx-0 mt-10">
            Read More
           </div>
         </div>

@@ -45,7 +45,7 @@ export const Faq = () => {
   };
   return (
     <>
-      <section className=" text-center md:flex md:max-w-[1100px] md:justify-center md:items-center  md:mx-auto">
+      <section className="text-center md:flex md:max-w-[1100px] md:justify-center md:items-center  md:mx-auto">
         <div className="md:w-1/2">
           <div>
             <p className="text-[20px] font-bold w-[250px] mx-auto my-4 md:mx-0 md:text-[32px] md:w-[350px] md:text-left">
@@ -60,7 +60,7 @@ export const Faq = () => {
           <div className="px-4 max-w-[400px] md:px-0 ">
             {faqItems.map((item, idx) => (
               <div key={idx} className="border-b-[.05rem] border-[#D434FE]">
-                <div className="flex justify-between p-2">
+                <div className="flex justify-between p-2  md:pt-8 md:px-0">
                   <h4 className="text-[12px]  text-left md:text-[14px]">{item.heading}</h4>
                   <div className="text-center cursor-pointer">
                     <IoIosAdd
