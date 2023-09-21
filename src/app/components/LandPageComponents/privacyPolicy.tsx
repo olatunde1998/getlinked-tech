@@ -47,7 +47,7 @@ export const PrivacyPolicy = () => {
                 navigate and register for our event
               </p>
             </div>
-            <div className="text-center bg-[#903AFF] p-3 rounded-lg w-[150px] mx-auto mt-8">
+            <div className="text-center bg-[#903AFF] bg-gradient-to-r from-[#D434FE] to-[#903AFF] p-3 rounded-lg w-[150px] mx-auto mt-8">
               Read More
             </div>
           </div>
