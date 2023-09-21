@@ -98,14 +98,14 @@ const Register = () => {
                       type="text"
                       label="Team's Name"
                       className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />
                     <Input
                       type="text"
                       label="Phone"
                       className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />{" "}
                   </div>
@@ -114,14 +114,14 @@ const Register = () => {
                       type="text"
                       label="Email"
                       className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />
                     <Input
                       type="text"
                       label="Project Topic"
                       className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />
                   </div>
@@ -134,7 +134,7 @@ const Register = () => {
                         onSelect={handleSelect}
                         selectOption=""
                         className="mt-4"
-                        classNameTwo="bg-[#1C142E] p-3"
+                        classNameTwo="bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  p-3"
                         inputData={categoryData}
                       />
                     </div>
@@ -146,7 +146,7 @@ const Register = () => {
                         onSelect={handleSelect}
                         selectOption=""
                         className="mt-4"
-                        classNameTwo="bg-[#1C142E] p-3"
+                        classNameTwo="bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  p-3"
                         inputData={groupData}
                       />
                     </div>
