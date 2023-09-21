@@ -5,16 +5,15 @@ import { useState } from "react";
 import { Confirmation, Modal } from "../components/modal/index";
 import Link from "next/link";
 import { Header } from "../components/LandPageComponents";
+import { useRouter } from "next/navigation";
 
 const Register = () => {
+  const router = useRouter();
   const [showConfirmation, setShowConfirmation] = useState(false);
   const categoryData = [
     "Nigeria",
     "Ghana",
     "South Africa",
-    "Kenya",
-    "Togo",
-    "Benin",
   ];
   const groupData = ["0-20", "20-40", "40-80", "80-100"];
   const handleSelect = (value: any) => {
@@ -22,19 +21,26 @@ const Register = () => {
   };
   return (
     <>
-      <div className="">
+      <div className="bg-[url(/images/desktop-images/contact-bg.png)] bg-no-repeat bg-cover md:pb-40">
         <div className="hidden md:block">
           <Header />
         </div>
-        <main className="bg-[#140D27] pb-16  xl:h-screen md:pt-48">
-          <Link
-            href="./"
-            className="pt-6 md:hidden text-[#FF26B9] text-[28px] pl-8 font-bold mb-6"
+        <main className="pb-16  xl:h-screen md:pt-48">
+          <div
+            className="mt-8"
+            onClick={() => {
+              router.push("/");
+            }}
           >
-            Register
-          </Link>
+            <Link
+              href="./"
+              className="md:hidden text-[#FF26B9] text-[28px] pl-8 font-bold mb-6"
+            >
+              Register
+            </Link>
+          </div>
           <section className="max-w-[1200px] mx-auto md:flex">
-            <div className="md:w-1/2 flex flex-col items-center justify-center">
+            <div className="mt-16 md:w-1/2 flex flex-col items-center justify-center md:mt-0">
               <div className="relative w-[250px] h-[150px] mx-auto md:mx-0 md:hidden">
                 <Image
                   src="/images/mobile-images/register-3d.png"
@@ -50,7 +56,7 @@ const Register = () => {
                 />
               </div>
             </div>
-            <div className="md:w-2/3 md:border-2 md:border-white px-6 md:px-4 lg:p-12 lg:pt-4 rounded-xl">
+            <div className="md:w-2/3 px-6 md:px-4 lg:p-12 lg:pt-4 rounded-xl bg-[#140D27] md:bg-gradient-to-br from-[#1C152E] to-[#3a1262]">
               <div className="text-white text-center my-8 md:text-left">
                 <div className="flex items-baseline pl-5 gap-4 mb-3 md:hidden">
                   <p className="text-[12px] md:text-left  ">
@@ -163,7 +169,7 @@ const Register = () => {
                 <div className="mt-6 flex justify-center cursor-pointer">
                   <div
                     onClick={() => setShowConfirmation(true)}
-                    className="text-white bg-[#B038FF] p-4 w-[150px] rounded-md md:w-full text-center cursor-pointer"
+                    className="text-white bg-[#B038FF] bg-gradient-to-r from-[#D434FE] to-[#903AFF]  p-4 w-[150px] rounded-md md:w-full text-center cursor-pointer"
                   >
                     Submit
                   </div>

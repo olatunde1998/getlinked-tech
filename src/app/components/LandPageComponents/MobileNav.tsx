@@ -77,7 +77,7 @@ const MobileNav = () => {
                 {link.title}
               </Link>
             ))}
-            <Link href='/register' className="text-center bg-[#9025AD] cursor-pointer p-3 rounded-lg w-[150px] mt-6 md:mx-0 md:hidden lg:block">
+            <Link href='/register' className="text-center bg-[#9025AD] bg-gradient-to-r from-[#D434FE] to-[#903AFF] cursor-pointer p-3 rounded-lg w-[150px] mt-6 md:mx-0 md:hidden lg:block">
               Register
             </Link>
           </nav>
