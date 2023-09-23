@@ -78,7 +78,7 @@ const Register = () => {
   };
   return (
     <>
-      <div className="bg-[url(/images/desktop-images/contact-bg.png)] bg-no-repeat bg-cover md:pb-40">
+      <div className="bg-[url(/images/desktop-images/contact-bg.png)] bg-no-repeat bg-cover md:pb-40 h-screen">
         <div className="hidden md:block">
           <Header />
         </div>
