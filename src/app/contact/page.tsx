@@ -87,7 +87,7 @@ const Contact = () => {
             </div>
             <div className="hidden md:block md:w-1/2 lg:pl-20">
               <div className=" mt-32">
-                <h3 className="text-[#D434FE] text-[28px] font-bold">
+                <h3 className="text-[#D434FE] text-[28px] font-bold font-heading">
                   Get in touch
                 </h3>
                 <p className="text-[18px]  mt-4">
@@ -115,7 +115,7 @@ const Contact = () => {
             <div className="md:w-2/3 md:shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-lg lg:p-6">
               <div className="md:bg-gradient-to-br from-[#1C152E] to-[#3a1262]  rounded-lg max-w-[600px] md:p-12 lg:pl-16 md:bg-[#1C142E]">
                 <div>
-                  <h3 className="text-[#D434FE] font-bold text-[20px] max-w-[190px]">
+                  <h3 className="text-[#D434FE] font-bold font-heading text-[20px] max-w-[190px] lg:max-w-[320px]">
                     Questions or need assistance? Let us know about it
                   </h3>
                   <p className="md:hidden text-[12px] max-w-[200px] my-6">
