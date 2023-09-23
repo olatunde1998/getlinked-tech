@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { HeroRingIcon } from "../../../../assets/icons/HeroRingIcon";
 import { BulbIcon } from "../../../../assets/icons";
 import { useRouter } from "next/navigation";
 
@@ -33,12 +32,12 @@ export const Hero = () => {
             />
           </div>
         </div>
-        <div className="lg:max-w-[700px]  relative top-8 left-8  flex items-left justify-center md:relative md:left-[-70px] xl:top-4 xl:left-10">
+        <div className="lg:max-w-[700px]  relative top-8 left-8  flex items-left justify-center md:relative md:left-[-230px] md:top-10 lg:left-[-25px] lg:top-16 xl:top-12 xl:left-12">
           <BulbIcon className="w-[20px] h-[24px] md:w-[30px] md:h-[24px] lg:h-[60px] xl:w-[50px] xl:h-[60px] ml-16" />
         </div>
         <section className="md:flex md:max-w-[1200px] mx-auto  lg: lg:ml-0 lg:mr-auto">
-          <div className="text-center mt-8  lg:relative lg:left-16 md:relative md:bottom-8 md:w-1/2">
-            <div className="text-[24px] font-heading font-bold md:text-left md:text-[24px] md:w-[400px] xl:text-[52px] lg:w-[500px] xl:w-[600px]">
+          <div className="text-center mt-8  lg:relative lg:left-1 md:relative md:bottom- md:w-1/2 lg:bottom-0">
+            <div className="text-[24px] font-heading font-bold md:text-left md:text-[24px] md:w-[400px] lg:text-[52px] xl:text-[64px] lg:w-[500px] xl:w-[600px]">
               getlinked Tech <br />
               <p className="flex items-center justify-center md:justify-start">
                 Hackathon <span className="ml-3 text-[#D434FE]">1.0</span>
@@ -47,7 +46,7 @@ export const Hero = () => {
                   height={33}
                   className="md:ml-20 lg:w-[100px] lg:h-[50px]"
                 /> */}
-                <Image src='/images/desktop-images/heroring.png' alt="ring light picx" width={100} height={100}/>
+                <Image src='/images/desktop-images/heroring.png' alt="ring light picx" width={100} height={100} className="ml-4"/>
               </p>
             </div>
             <p className=" text-[12px] w-[250px] text-center  mx-auto my-4 leading-6 md:text-left md:mx-0">
@@ -73,7 +72,7 @@ export const Hero = () => {
                 fill
               />
             </div>
-            <div className="relative w-[400px] h-[400px] mx-auto hidden md:block md:w-[420px] lg:w-[520px] xl:w-[750px]">
+            <div className="relative w-[400px] h-[400px] mx-auto hidden md:block md:w-[520px] lg:w-[620px] lg:h-[450px] xl:w-[850px] xl:h-[450px] right-20">
               <Image
                 src="/images/desktop-images/hackathon-guy-desktop.png"
                 alt="hackathon guy picx"
