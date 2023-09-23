@@ -2,6 +2,7 @@ import Link from "next/link";
 import MobileNav from "./MobileNav";
 import { GetLinkedIcon } from "../../../../assets/icons";
 
+
 export const Header = () => {
   return (
     <nav className="flex fixed top-0 z-20 w-full border-b-[0.35px] bg-[#140D27] border-white border-opacity-25 py-6 text-white ">
@@ -15,7 +16,7 @@ export const Header = () => {
         <div className="flex items-center max-md:hidden md:space-x-20 md:mr-2">
           <ul className="flex gap-x-3 md:gap-x-10">
             <li className="font-bold hover:text-gradient_blue-purple">
-              <Link href="/">Timeline</Link>
+            <Link href="/">Timeline</Link>
             </li>
             <li className="hover:text-gradient_blue-purple !font-bold">
               <Link href="/">Overview</Link>

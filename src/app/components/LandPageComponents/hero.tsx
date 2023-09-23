@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { HeroRingIcon } from "../../../../assets/icons/HeroRingIcon";
 import { BulbIcon } from "../../../../assets/icons";
+import { useRouter } from "next/navigation";
 
 export const Hero = () => {
+  const router = useRouter();
   return (
     <>
       <main className="md:max-w-[1200px] md:mx-auto md:items-center md:justify-center">
@@ -51,12 +53,12 @@ export const Hero = () => {
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
-            <div className="text-center bg-[#903AFF] bg-gradient-to-r from-[#D434FE] to-[#903AFF] mb-6 p-3 rounded-lg w-[150px] mx-auto md:mx-0 xl:mt-4">
+            <div onClick={() => router.push('/register')} className="cursor-pointer text-center bg-[#903AFF] bg-gradient-to-r from-[#D434FE] to-[#903AFF] mb-6 p-3 rounded-lg w-[150px] mx-auto md:mx-0 xl:mt-4">
               Register
             </div>
             {/* time */}
             <div className="md:mx-0 md:text-left xl:mt-4">
-              <span className="font-bold text-[32px]">00</span>
+              <span className="font-normal text-[32px]">00</span>
               <span>H</span> <span className="font-bold text-[32px]">00</span>
               <span>M</span> <span className="font-bold text-[32px]">00</span>
               <span>s</span>
