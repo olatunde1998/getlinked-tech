@@ -4,7 +4,6 @@ import {
   Header,
   Hero,
   Introduction,
-  NavBar,
   Partners,
   PrivacyPolicy,
   Rewards,

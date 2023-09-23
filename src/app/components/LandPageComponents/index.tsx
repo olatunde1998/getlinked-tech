@@ -1,4 +1,3 @@
-export * from "./navbar"
 export * from './hero'
 export * from './Introduction'
 export * from './Rule'
