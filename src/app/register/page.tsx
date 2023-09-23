@@ -113,7 +113,7 @@ const Register = () => {
                 />
               </div>
             </div>
-            <div className="md:w-2/3 px-6 md:px-4 lg:p-12 lg:pt-4 rounded-xl bg-[#140D27] md:bg-gradient-to-br from-[#1C152E] to-[#3a1262]">
+            <div className="md:w-2/3 px-6 md:px-4 lg:p-12 lg:pt-4 rounded-xl md:bg-gradient-to-br from-[#1C152E] to-[#240d3b]">
               <div className="text-white text-center my-8 md:text-left">
                 <div className="flex items-baseline pl-5 gap-4 mb-3 md:hidden">
                   <p className="text-[12px] md:text-left  ">

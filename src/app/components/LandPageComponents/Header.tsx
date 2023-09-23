@@ -5,7 +5,7 @@ import { GetLinkedIcon } from "../../../../assets/icons";
 
 export const Header = () => {
   return (
-    <nav className="flex fixed top-0 z-20 w-full border-b-[0.35px] bg-[#140D27] border-white border-opacity-25 py-6 text-white ">
+    <nav className="flex fixed top-0 z-20 w-full border-b-[0.35px] bg-[#140D27] md:border-gray-50/20 py-6 text-white ">
       <div className="flex items-center justify-between mx-auto w-full max-w-screen-2xl px-4 md:px-2 xl:px-16">
         <div className="flex gap-20 pl-2 xl:pl-20">
           <Link href="/" className="flex items-center">
