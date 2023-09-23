@@ -17,8 +17,8 @@ export const Introduction = () => {
           />
         </div>
         <div className="md:w-1/2 md:text-left">
-          <p className="text-[20px] font-bold w-[250px] mx-auto my-4 md:mx-0 md:text-[32px] md:w-full">
-            Introduction to getlinked{" "}
+          <p className="text-[20px] font-bold font-heading w-[220px] mx-auto my-4 md:mx-0 md:text-[32px] md:w-full">
+            Introduction to getlinked{" "}<br/>
             <span className="text-[#D434FE]">tech Hackathon 1.0</span>
           </p>
           <p className="text-[12px] w-[250px] leading-8 mx-auto md:mx-0 md:w-full md:text-[14px] ">

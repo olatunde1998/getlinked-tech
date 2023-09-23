@@ -21,7 +21,7 @@ export const Criteria = () => {
           />
         </div>
         <div className="md:text-left md:w-2/3">
-          <p className="text-[20px] font-bold w-[180px] mx-auto my-4 md:mx-0  md:text-[32px] md:w-[300px]">
+          <p className="text-[20px] font-bold w-[180px] font-heading mx-auto my-4 md:mx-0  md:text-[32px] md:w-[300px]">
             Judging Criteria{" "}
             <span className="text-[#D434FE]">Key attributes</span>
           </p>

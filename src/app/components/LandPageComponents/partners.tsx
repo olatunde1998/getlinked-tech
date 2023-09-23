@@ -6,7 +6,7 @@ export const Partners = () => {
     <>
       <section className="text-center">
         <div>
-          <p className="text-[20px] font-bold  mx-auto my-4 md:text-[32px]">
+          <p className="text-[20px] font-bold font-heading  mx-auto my-4 md:text-[32px]">
             Partners and Sponsors
           </p>
           <p className="text-[12px] w-[240px] leading-6 mx-auto mb-4 md:w-[400px] md:text-[14px] lg:mb-20">

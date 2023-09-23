@@ -48,7 +48,7 @@ export const Faq = () => {
       <section className="text-center md:flex md:max-w-[1100px] md:justify-center md:items-center  md:mx-auto">
         <div className="md:w-1/2">
           <div>
-            <p className="text-[20px] font-bold w-[250px] mx-auto my-4 md:mx-0 md:text-[32px] md:w-[350px] md:text-left">
+            <p className="text-[20px] font-bold font-heading w-[250px] mx-auto my-4 md:mx-0 md:text-[32px] md:w-[350px] md:text-left">
               Frequently Ask
               <span className="text-[#D434FE]"> Question</span>
             </p>

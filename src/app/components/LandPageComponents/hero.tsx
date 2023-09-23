@@ -38,15 +38,16 @@ export const Hero = () => {
         </div>
         <section className="md:flex md:max-w-[1200px] mx-auto  lg: lg:ml-0 lg:mr-auto">
           <div className="text-center mt-8  lg:relative lg:left-16 md:relative md:bottom-8 md:w-1/2">
-            <div className="text-[24px] font-bold md:text-left md:text-[24px] md:w-[400px] xl:text-[52px] lg:w-[500px] xl:w-[600px]">
+            <div className="text-[24px] font-heading font-bold md:text-left md:text-[24px] md:w-[400px] xl:text-[52px] lg:w-[500px] xl:w-[600px]">
               getlinked Tech <br />
               <p className="flex items-center justify-center md:justify-start">
-                Hackathon 1.0
-                <HeroRingIcon
+                Hackathon <span className="ml-3 text-[#D434FE]">1.0</span>
+                {/* <HeroRingIcon
                   width={55}
                   height={33}
                   className="md:ml-20 lg:w-[100px] lg:h-[50px]"
-                />
+                /> */}
+                <Image src='/images/desktop-images/heroring.png' alt="ring light picx" width={100} height={100}/>
               </p>
             </div>
             <p className=" text-[12px] w-[250px] text-center  mx-auto my-4 leading-6 md:text-left md:mx-0">
@@ -57,11 +58,11 @@ export const Hero = () => {
               Register
             </div>
             {/* time */}
-            <div className="md:mx-0 md:text-left xl:mt-4">
-              <span className="font-normal text-[32px]">00</span>
-              <span>H</span> <span className="font-bold text-[32px]">00</span>
-              <span>M</span> <span className="font-bold text-[32px]">00</span>
-              <span>s</span>
+            <div className="md:mx-0 md:text-left xl:mt-4 font-unica">
+              <span className="font-normal text-[42px]">00</span>
+              <span className="mr-4">H</span> <span className="font-bold text-[42px]">00</span>
+              <span className="mr-4">M</span> <span className="font-bold text-[42px]">00</span>
+              <span className="mr-4">s</span>
             </div>
           </div>
           <div className="md:w-2/3">

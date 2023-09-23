@@ -6,7 +6,7 @@ export const Rewards = () => {
     <>
       <section className="text-center">
         <div className="md:hidden">
-          <p className="text-[20px] font-bold w-[180px] mx-auto ">
+          <p className="text-[20px] font-bold w-[180px] mx-auto font-heading">
             Prizes and
             <span className="text-[#D434FE]"> Rewards</span>
           </p>
@@ -35,7 +35,7 @@ export const Rewards = () => {
           {/* winners reward for positions */}
           <div className="md:w-2/3">
             <div className="w-fit md:mx-auto hidden md:block">
-              <p className="text-[20px] font-bold w-[180px] mx-auto md:mx-0 text-left md:text-[32px] md:leading-10 md:mb-6 ">
+              <p className="text-[20px] font-bold font-heading w-[180px] mx-auto md:mx-0 text-left md:text-[32px] md:leading-10 md:mb-6 ">
                 Prizes and
                 <span className="text-[#D434FE]"> Rewards</span>
               </p>

@@ -17,8 +17,8 @@ export const Rules = () => {
           />
         </div>
         <div className="md:text-left md:w-1/2 ">
-          <p className="text-[20px] font-bold w-[250px] mx-auto my-4 md:text-[32px] md:w-full">
-            Rules and <span className="text-[#D434FE]">Guidelines</span>
+          <p className="text-[20px] font-bold font-heading w-[250px] mx-auto my-4 md:text-[32px] md:w-full">
+            Rules and <br/> <span className="text-[#D434FE]">Guidelines</span>
           </p>
           <p className="text-[12px] w-[250px] leading-8 mx-auto  md:mx-0  md:w-[350px] lg:w-[500px] md:text-[14px] ">
             Our tech hackathon is a melting pot of visionaries, and its purpose

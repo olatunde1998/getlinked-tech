@@ -5,7 +5,7 @@ export const TailwindTimeLine = () => {
     <>
       <section className="hidden md:block">
         <div>
-          <p className="text-[20px] font-bold  mx-auto my-4 md:text-[32px] text-center">
+          <p className="text-[20px] font-bold  mx-auto my-4 md:text-[32px] text-center font-heading">
             Timeline
           </p>
           <p className="text-center text-[12px] w-[240px] leading-6 mx-auto mb-4 md:w-[350px] md:text-[14px] lg:mb-20 ">

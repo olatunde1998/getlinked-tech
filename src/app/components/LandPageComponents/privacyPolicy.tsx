@@ -8,7 +8,7 @@ export const PrivacyPolicy = () => {
       <div className="md:flex md:max-w-[1200px]  md:gap-24 md:mx-auto md:items-center xl:pl-12">
         <section className="text-center md:w-1/2">
           <div>
-            <p className="text-[20px] font-bold w-[180px] mx-auto md:mx-0 md:text-left md:text-[32px] md:w-[300px] md:leading-10">
+            <p className="text-[20px] font-bold font-heading w-[180px] mx-auto md:mx-0 md:text-left md:text-[32px] md:w-[300px] md:leading-10">
               Privacy Policy and
               <span className="text-[#D434FE]"> Terms</span>
             </p>
