@@ -49,7 +49,7 @@ export const Hero = () => {
                 <Image src='/images/desktop-images/heroring.png' alt="ring light picx" width={100} height={100} className="ml-4"/>
               </p>
             </div>
-            <p className=" text-[12px] w-[250px] text-center  mx-auto my-4 leading-6 md:text-left md:mx-0">
+            <p className=" text-[12px] w-[250px] text-center  mx-auto my-4 leading-6 md:text-left md:mx-0 md:text-[16px] md:w-3/4 font-body md:leading-6">
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
