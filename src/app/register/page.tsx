@@ -82,7 +82,7 @@ const Register = () => {
         <div className="hidden md:block">
           <Header />
         </div>
-        <main className="pb-16  xl:h-screen md:pt-48">
+        <main className="pb-16 md:pt-48">
           <div
             className="mt-8"
             onClick={() => {
