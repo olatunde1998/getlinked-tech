@@ -7,14 +7,75 @@ import {
   XIcon,
 } from "../../../assets/icons";
 import { BackIcon } from "../../../assets/icons/BackIcon";
-import { Input, TextArea } from "../components/Input";
+import { Input } from "../components/Input";
 import { Header } from "../components/LandPageComponents";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Confirmation, Modal } from "../components/modal";
 
 const Contact = () => {
+  const [showConfirmation, setShowConfirmation] = useState(false);
   const router = useRouter();
+  const successNotifying = () => {
+    toast.success("Message sent successfully", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+  const errorNotifying = () => {
+    toast.error("fill your input box", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const onSubmitHandler = (event: any) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(event.target);
+    const requestData = {
+      email: formData.get("email"),
+      phone_number: "08133630000",
+      first_name: formData.get("first_name"),
+      message: formData.get("message"),
+    };
+
+    axios
+      .post(
+        "https://backend.getlinked.ai/hackathon/contact-form",
+        requestData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        successNotifying();
+        setShowConfirmation(true);
+      })
+      .catch((error) => {
+        console.error("Request error:", error);
+        errorNotifying();
+      });
+  };
+
+  useEffect(() => {
+    const form = document.getElementById("contact-form");
+
+    if (form) {
+      form.addEventListener("submit", onSubmitHandler);
+    }
+    return () => {
+      if (form) {
+        form.removeEventListener("submit", onSubmitHandler);
+      }
+    };
+  }, []);
   return (
     <>
-    
       <section className="bg-[url(/images/desktop-images/contact-bg2.png)] bg-no-repeat bg-cover md:pb-48">
         <div className="hidden md:block">
           <Header />
@@ -62,30 +123,27 @@ const Contact = () => {
                   </p>
                 </div>
                 <div className="max-w-[550px]">
-                  <form action="">
+                  <form id="contact-form">
                     <Input
+                      inputName="first_name"
                       type="text"
                       className="mt-6"
                       classNameTwo="p-3 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262] pl-8"
-                      placeholder="Team's Name"
+                      placeholder="First Name"
                     />
                     <Input
-                      type="text"
+                      inputName="email"
+                      type="email"
                       className="mt-6"
                       classNameTwo="p-3 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-8"
-                      placeholder="Topic"
-                    />
-                    <Input
-                      type="text"
-                      className="mt-6"
-                      classNameTwo="p-3 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262] pl-8"
                       placeholder="Mail"
                     />
-                    <TextArea
+                    <textarea
+                      className="border rounded focus:outline-none p-3 w-full mt-8 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262] pl-8"
+                      name="message"
                       placeholder="Message"
                       rows={4}
-                      classNameTwo="p-3 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262] pl-8"
-                      className="mt-4"
+                      required
                     />
                     <div className="mt-8 flex justify-center">
                       <button
@@ -110,6 +168,13 @@ const Contact = () => {
             </div>
           </div>
         </section>
+        <Modal
+          show={showConfirmation}
+          onClose={() => setShowConfirmation(false)}
+        >
+          <Confirmation setShowConfirmation={setShowConfirmation} />
+        </Modal>
+        <ToastContainer />
       </section>
     </>
   );

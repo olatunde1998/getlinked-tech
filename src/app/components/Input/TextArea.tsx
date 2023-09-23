@@ -6,6 +6,7 @@ interface TextAreaProps {
     rows?: any;
     classNameTwo?: string;
     placeholder?: string;
+    register?: any;
   }
   
   export const TextArea = ({
@@ -16,6 +17,7 @@ interface TextAreaProps {
     rows,
     classNameTwo,
     placeholder,
+    register
   }: TextAreaProps) => {
     return (
       <>
@@ -28,6 +30,7 @@ interface TextAreaProps {
             name=""
             placeholder={placeholder}
             rows={rows}
+            {...register}
           ></textarea>
         </div>
       </>

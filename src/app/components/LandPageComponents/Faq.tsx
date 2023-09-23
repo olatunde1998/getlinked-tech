@@ -5,7 +5,7 @@ import { IoIosAdd, IoIosRemove } from "react-icons/io";
 
 const faqItems = [
   {
-    heading: "Can I work on a project I started before the hackathon?  ",
+    heading: "Can I work on a project I started before the hackathon? ",
     description:
       "Yes, you can invest in multiple projects simultaneously. Diversifying your investment portfolio across different projects allows you to spread risk and maximize potential returns. Our platform supports investing in multiple projects, giving you the flexibility to choose from various sectors and initiatives within Enugu",
   },
@@ -25,7 +25,7 @@ const faqItems = [
       "Yes, you can invest in multiple projects simultaneously. Diversifying your investment portfolio across different projects allows you to spread risk and maximize potential returns. Our platform supports investing in multiple projects, giving you the flexibility to choose from various sectors and initiatives within Enugu.",
   },
   {
-    heading: "Can I invest in multiple projects simultaneously?",
+    heading: "What happens after the hackathon ends",
     description:
       "Yes, you can invest in multiple projects simultaneously. Diversifying your investment portfolio across different projects allows you to spread risk and maximize potential returns. Our platform supports investing in multiple projects, giving you the flexibility to choose from various sectors and initiatives within Enugu.",
   },

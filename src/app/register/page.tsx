@@ -1,23 +1,80 @@
 "use client";
 import Image from "next/image";
-import { Input, Selector } from "../components/Input";
+import { Input, Selector, GroupSelector } from "../components/Input";
 import { useState } from "react";
 import { Confirmation, Modal } from "../components/modal/index";
 import Link from "next/link";
 import { Header } from "../components/LandPageComponents";
 import { useRouter } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+import { getCategoriesListApi } from "../services";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import axios from "axios";
+
 
 const Register = () => {
+  const [country, setCountry] = useState();
+  const [group, setGroup] = useState();
   const router = useRouter();
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const categoryData = [
-    "Nigeria",
-    "Ghana",
-    "South Africa",
-  ];
-  const groupData = ["0-20", "20-40", "40-80", "80-100"];
-  const handleSelect = (value: any) => {
+  const groupData = ["1", "2", "3", "4"];
+
+  const successNotifying = () => {
+    toast.success("Account Created Successfully", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const errorNotifying = () => {
+    toast.error("Fill your detail properly", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const { data: categoryDatas } = useQuery({
+    queryKey: ["getCategoriesListApi"],
+    queryFn: getCategoriesListApi,
+  });
+  console.log(categoryDatas, "===++++");
+
+  const handleCountrySelect = (value: any) => {
+    setCountry(value);
     console.log(value);
+  };
+
+  const handleGroupSelect = (value: any) => {
+    console.log(value);
+    setGroup(value);
+  };
+
+  const onSubmitHandler = async (event: any) => {
+    event.preventDefault();
+    console.log("Form submitted");
+    const formData = new FormData(event.target);
+    const data = {
+      email: formData.get("email"),
+      phone_number: formData.get("phone_number"),
+      team_name: formData.get("team_name"),
+      group_size: group,
+      project_topic: formData.get("project_topic"),
+      category: 2,
+      privacy_poclicy_accepted: true,
+    };
+
+    try {
+      const response = await axios.post(
+        "https://backend.getlinked.ai/hackathon/registration",
+        data
+      );
+      console.log(response.data, "==== this is response submission data");
+      successNotifying();
+      setShowConfirmation(true);
+    } catch (error) {
+      console.error(error);
+      errorNotifying();
+    }
   };
   return (
     <>
@@ -91,37 +148,41 @@ const Register = () => {
                   Create your account
                 </p>
               </div>
-              <form action="">
+              <form onSubmit={onSubmitHandler}>
                 <div className="px-6 md:px-0">
                   <div className="md:flex gap-4">
                     <Input
+                      inputName="team_name"
                       type="text"
                       label="Team's Name"
-                      className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      className="mt-6 md:w-1/2 text-white"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262] text-white  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />
                     <Input
+                      inputName="phone_number"
                       type="text"
                       label="Phone"
-                      className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      className="mt-6 md:w-1/2 text-white"
+                      classNameTwo="p-4 text-white bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-white text-[12px] md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />{" "}
                   </div>
                   <div className="md:flex gap-6">
                     <Input
+                      inputName="email"
                       type="text"
                       label="Email"
-                      className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      className="mt-6 md:w-1/2 text-white"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] text-white md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />
                     <Input
+                      inputName="project_topic"
                       type="text"
                       label="Project Topic"
-                      className="mt-6 md:w-1/2"
-                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] md:text-[8px] lg:text-[12px]"
+                      className="mt-6 md:w-1/2 text-white"
+                      classNameTwo="p-4 bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  pl-2 text-[12px] text-white md:text-[8px] lg:text-[12px]"
                       placeholder="Enter the name of your group"
                     />
                   </div>
@@ -131,19 +192,19 @@ const Register = () => {
                         label="Country of Interest"
                         focusContent=""
                         placeholder="Draft"
-                        onSelect={handleSelect}
+                        onSelect={handleCountrySelect}
                         selectOption=""
                         className="mt-4"
                         classNameTwo="bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  p-3"
-                        inputData={categoryData}
+                        inputData={categoryDatas}
                       />
                     </div>
                     <div className="w-1/2">
-                      <Selector
+                      <GroupSelector
                         label="Group Size"
                         focusContent=""
                         placeholder="Draft"
-                        onSelect={handleSelect}
+                        onSelect={handleGroupSelect}
                         selectOption=""
                         className="mt-4"
                         classNameTwo="bg-[#1C142E] bg-gradient-to-r from-[#1C152E] to-[#3a1262]  p-3"
@@ -167,12 +228,12 @@ const Register = () => {
                   </p>
                 </div>
                 <div className="mt-6 flex justify-center cursor-pointer">
-                  <div
-                    onClick={() => setShowConfirmation(true)}
+                  <button
+                    type="submit"
                     className="text-white bg-[#B038FF] bg-gradient-to-r from-[#D434FE] to-[#903AFF]  p-4 w-[150px] rounded-md md:w-full text-center cursor-pointer"
                   >
                     Submit
-                  </div>
+                  </button>
                 </div>
               </form>
             </div>
@@ -184,6 +245,7 @@ const Register = () => {
         >
           <Confirmation setShowConfirmation={setShowConfirmation} />
         </Modal>
+        <ToastContainer />
       </div>
     </>
   );
