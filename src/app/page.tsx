@@ -21,7 +21,7 @@ export default function Home() {
         <div className="bg-[#270C4B]">
           <Header />
         </div>
-        <div className="bg-[url(/images/desktop-images/hero-bg.png)] bg-no-repeat bg-contain md:border-b-[0.01px] md:border-gray-50/20 pt-28 md:pl-4 lg:pl-10 md:pt-28 lg:pt-32">
+        <div className="bg-[url(/images/desktop-images/hero-bg-2.png)] bg-no-repeat bg-cover md:bg-contain md:border-b-[0.01px] md:border-gray-50/20 pt-28 md:pl-4 lg:pl-10 md:pt-28 lg:pt-32">
           <Hero />
         </div>
         <div className="bg-[#140D27] py-10 md:border-b-[0.01px] md:border-gray-50/20 md:px-4 lg:px-10 lg:pt-16 lg:pb-32">
