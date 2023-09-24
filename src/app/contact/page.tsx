@@ -76,11 +76,11 @@ const Contact = () => {
   }, []);
   return (
     <>
-      <section className="bg-[url(/images/desktop-images/contact-bg2.png)] bg-no-repeat bg-cover md:pb-48">
+      <section className="bg-[url(/images/desktop-images/contact-bg2.png)] bg-no-repeat bg-cover md:pb-48 ">
         <div className="hidden md:block">
           <Header />
         </div>
-        <section className=" pb-16 text-white px-6 md:px-8 pt-12 xl:h-screen md:pt-48">
+        <section className="pb-16 text-white px-6 md:px-8 pt-12 xl:h-screen md:pt-48">
           <div className="md:flex gap-2 lg:gap-8  md:justify-center max-w-[1200px] mx-auto">
             <div className="mb-8 md:hidden" onClick={() => router.back()}>
               <BackIcon width={24} height={24} />
@@ -112,7 +112,7 @@ const Contact = () => {
               </div>
             </div>
             {/* form side */}
-            <div className="md:w-2/3 md:shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-lg lg:p-6">
+            <div className="md:w-2/3  lg:p-6">
               <div className="md:bg-gradient-to-br from-[#1C152E] to-[#3a1262]  rounded-lg max-w-[600px] md:p-12 lg:pl-16 md:bg-[#1C142E]">
                 <div>
                   <h3 className="text-[#D434FE] font-bold font-heading text-[20px] max-w-[190px] lg:max-w-[320px]">
